@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faThLarge, faTh } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FooterComp from './FooterComp';
 import HomeMainComp from './HomeMainComp';
 import NavbarComp from './NavbarComp';

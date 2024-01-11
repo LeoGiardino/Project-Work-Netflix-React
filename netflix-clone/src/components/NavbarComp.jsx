@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import ProfiloMainComp from './ProfiloMainComp';
+import '../NavbarComp.css';
+
 
 export default function NavbarComp({ logo, onIconClick, onIconClick2 }) {
   
@@ -37,7 +38,7 @@ export default function NavbarComp({ logo, onIconClick, onIconClick2 }) {
             <FontAwesomeIcon icon={faSearch} className="icons ms-auto" />
             <div id="kids">KIDS</div>
             <FontAwesomeIcon icon={faBell} className="icons" />
-            <FontAwesomeIcon icon={faUser} className="icons" onClick={onIconClick} />
+            <FontAwesomeIcon icon={faUser} className="icons utente" onClick={onIconClick} />
           </Navbar.Collapse>
         </Container>
       </Navbar>

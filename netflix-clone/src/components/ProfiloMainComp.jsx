@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Dropdown } from 'react-bootstrap';
+import { BiCheckSquare } from 'react-icons/bi';
+
 
 export default class ProfiloMainComp extends Component {
   render() {
@@ -51,11 +53,11 @@ export default class ProfiloMainComp extends Component {
               <div className="terzoBlock d-flex flex-column pb-4">
                 <label className="mt-5 mb-3">Autoplay controls</label>
                 <div className="d-flex align-items-center ">
-                  <i className="bi bi-check-square fs-2 me-3"></i>
+                <BiCheckSquare className="fs-2 me-3" style={{color: 'white'}}/>
                   <p className="mb-0">Autoplay previews while browsing on all devices.</p>
                 </div>
                 <div className="d-flex align-items-center ">
-                  <i className="bi bi-check-square fs-2 me-3"></i>
+                <BiCheckSquare className="fs-2 me-3" style={{color: 'white'}}/>
                   <p className="mb-0">Autoplay previews while browsing on all devices.</p>
                 </div>
               </div>
