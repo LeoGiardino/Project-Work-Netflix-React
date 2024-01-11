@@ -1,61 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import ProfiloMainComp from './ProfiloMainComp';
 
-export default function NavbarComp({ logo }) {
+export default function NavbarComp({ logo, onIconClick, onIconClick2 }) {
+  
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#221f1f' }}>
-        <a className="navbar-brand" href="#">
-            <img src={logo} alt="Logo" style={{ width: '100px', height: '55px' }} /> 
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <a className="nav-link font-weight-bold" href="javascript:void(0)">
-                Home <span className="sr-only"></span>
-              </a>
-            </li>
-            <li className="nav-item active">
-              <a className="nav-link font-weight-bold" href="#">
+      <Navbar expand="lg" variant="dark" style={{ backgroundColor: '#221f1f' }}>
+        <Container fluid style={{ margin: '0' }}>
+          <Navbar.Brand href="#">
+            <img src={logo} alt="Logo" style={{ width: '100px', height: '55px' }} />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarSupportedContent" />
+          <Navbar.Collapse id="navbarSupportedContent">
+            <Nav className="mr-auto">
+              <Nav.Link href="javascript:void(0)" className="font-weight-bold" onClick={onIconClick2}>
+                Home
+              </Nav.Link>
+              <Nav.Link href="#" className="font-weight-bold">
                 TV Shows
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link font-weight-bold" href="#">
+              </Nav.Link>
+              <Nav.Link href="#" className="font-weight-bold">
                 Movies
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link font-weight-bold" href="#">
+              </Nav.Link>
+              <Nav.Link href="#" className="font-weight-bold">
                 Recently Added
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link font-weight-bold" href="#">
+              </Nav.Link>
+              <Nav.Link href="#" className="font-weight-bold">
                 My List
-              </a>
-            </li>
-          </ul>
-          <FontAwesomeIcon icon={faSearch} className="icons ms-auto" />
-<div id="kids">KIDS</div>
-<FontAwesomeIcon icon={faBell} className="icons" />
-<FontAwesomeIcon icon={faUser} className="icons" />
-
-        </div>
-      </nav>
+              </Nav.Link>
+            </Nav>
+            <FontAwesomeIcon icon={faSearch} className="icons ms-auto" />
+            <div id="kids">KIDS</div>
+            <FontAwesomeIcon icon={faBell} className="icons" />
+            <FontAwesomeIcon icon={faUser} className="icons" onClick={onIconClick} />
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      
     </>
   );
 }
