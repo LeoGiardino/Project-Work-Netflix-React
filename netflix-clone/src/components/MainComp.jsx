@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faThLarge, faTh } from '@fortawesome/free-solid-svg-icons';
 import FooterComp from './FooterComp';
@@ -7,32 +7,44 @@ import NavbarComp from './NavbarComp';
 import logo from '../logo.png';
 import ProfiloMainComp from './ProfiloMainComp';
 
-// Aggiungi le icone alla libreria
+
 library.add(faThLarge, faTh);
 
+class MainComp extends Component {
+ 
 
+    state = {
+      showUserProfile: false 
+    };
 
+  
 
-export default function MainComp() {
-
-  const [showUserProfile, setShowUserProfile] = useState(false);
-
-  const handleIconClick = () => {
-    setShowUserProfile(true);
-    
+  handleIconClick = () => {
+    this.setState({
+      showUserProfile: true
+    });
   };
 
-  const home = () => {
-    setShowUserProfile(false);
+  handleHomeClick = () => {
+    this.setState({
+      showUserProfile: false
+    });
   }
 
-  return (
-    <>
-      <NavbarComp logo={logo} onIconClick={handleIconClick} onIconClick2={home}/>
+  render() {
+    const { showUserProfile } = this.state;
 
-      {showUserProfile ? <ProfiloMainComp /> : <HomeMainComp />}
-      
-      <FooterComp />
-    </>
-  );
+    return (
+      <>
+        <NavbarComp logo={logo} onIconClick={this.handleIconClick} onIconClick2={this.handleHomeClick}/>
+  
+        {showUserProfile ? <ProfiloMainComp /> : <HomeMainComp />}
+        
+        <FooterComp />
+      </>
+    );
+  }
 }
+
+
+export default MainComp;

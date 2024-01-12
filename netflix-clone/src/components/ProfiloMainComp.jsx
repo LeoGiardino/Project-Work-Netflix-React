@@ -17,7 +17,9 @@ export default class ProfiloMainComp extends Component {
                   alt=""
                   className=""
                 />
-                <i className="bi bi-pencil-square"></i>
+                
+                 <i className="bi bi-pencil-square"></i>
+        
               </div>
             </div>
             <div className="testo mt-4">
@@ -42,11 +44,11 @@ export default class ProfiloMainComp extends Component {
               </div>
               <div className="secondBlock d-flex flex-column border-bottom border-secondary">
                 <label className="mt-5 mb-3">Maturity Settings:</label>
-                <Button variant="dark" className="btn1 p-1 fs-5 mb-3" disabled>
+                <Button variant="dark" className="btn1 p-1 fs-5 mb-3" >
                   ALL MATURITY RATINGS
                 </Button>
                 <p className="mb-4">Show titles of all maturity ratings for this profile.</p>
-                <Button type="button" variant="outline-secondary" className="rounded-0 mb-5" disabled>
+                <Button type="button" variant="outline-secondary" className="rounded-0 mb-5" >
                   EDIT
                 </Button>
               </div>
@@ -66,13 +68,13 @@ export default class ProfiloMainComp extends Component {
         </div>
 
         <div className="bottoni w-50 m-auto d-flex justify-content-between mt-4">
-          <Button variant="primary" disabled>
+          <Button variant="primary" >
             SAVE
           </Button>
-          <Button variant="secondary" disabled>
+          <Button variant="secondary" >
             CANCEL
           </Button>
-          <Button variant="danger" disabled>
+          <Button variant="danger" >
             DELETE PROFILE
           </Button>
         </div>
