@@ -1,0 +1,2 @@
+Cliccando sull'icona user si genera la pagina profilo, cliccando su Home si torna alla 
+schermata principale... Solo la schermata principale è responsive
