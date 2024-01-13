@@ -16,10 +16,12 @@ class GalleriaUnoComp extends Component {
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
+        setTimeout(() => { /* Simulazione del tempo di caricamento */
         this.setState({
           data: data,
           loading: false,
-        });
+        })
+      },3000)
       })
       .catch((error) => {
         this.setState({
